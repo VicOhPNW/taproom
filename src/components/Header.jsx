@@ -2,12 +2,13 @@ import React from 'react';
 
 function Header(){
   let styledHeader = {
+    textAlign: 'center'
   };
 
   return (
     <div style={styledHeader}>
       <div className="jumbotron">
-        <p>Taproom</p>
+        <h1>Alex's Taproom</h1>
       </div>
     </div>
   );
