@@ -1,0 +1,50 @@
+# Taproom
+
+##### React exercise By Victoria O., Epicodus - November 16, 2018
+
+## *Description*
+_Taproom_ is a simple web app exercise to apply and test our understanding of React unit week 1 lessons. Primary Objectives:
+* Development environment is fully-functional, including Babel transpiling, Webpack module bundling, a development server with hot module replacement, and linting.
+* Components are used to create modular UI elements.
+* propTypes define data types and shapes for all component props.
+* Application successfully uses client-side routing via the React-Router library to create appearance of multiple pages.
+* Styles are successfully added using CSS objects.
+* Project demonstrates an understanding of this week's concepts. If prompted, you can discuss your code with an instructor using the correct terminology.
+
+## *Specifications*
+* [Component Structure](https://drive.google.com/file/d/1huNNHCX5O8ea0r6EQK9Z01d8VYarkKbS/view?usp=sharing)
+* A user can see a list of all available kegs.
+* For each keg, a user can see name, brand, price and alcohol content.
+* The home page routes to an 'add a keg' form "page".
+* Non-existent paths lead to "404".
+
+## *Known Bugs & Issues*
+* Site has no CRUD functionality
+
+## *Setup/Installation Requirements*
+
+1. Clone this repository by using Terminal command:
+```
+    $ git clone https://github.com/VicOhPNW/taproom.git
+```
+2. Then, within the project folder, run the following commands:
+```
+    $ npm install
+```
+```
+    $ npm run start
+```
+3. Once compiled, go to http://localhost:8080 to view. 
+
+## *Support and contact details*
+Contact: Victoria, ohvictori@gmail.com
+
+## *Technologies Used*
+* HTML
+* JSX
+* JavaScript
+* React
+* Node JS
+* Bootstrap
+
+#### *Copyright* (c) 2018 Victoria Oh, Epicodus
