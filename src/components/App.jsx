@@ -1,7 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Header from './Header';
 import KegList from './KegList';
+import NewKegForm from './NewKegForm';
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
   var styles = {
@@ -15,8 +17,10 @@ function App(){
 
 
       <Header/>
-      <KegList/>
-
+      <Switch>
+        <Route exact path='/' component={KegList} />
+        <Route path='/newkeg' component={NewKegForm} />
+      </Switch>
     </div>
   );
 }
