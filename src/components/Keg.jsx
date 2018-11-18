@@ -2,18 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props) {
-  let styledKeg ={};
+  // let styledKeg ={};
 
   return (
-    <div style={styledKeg}>
-      <p>name: {props.name}</p>
-      <p>brewer: {props.brewer}</p>
-      <p>description: {props.description}</p>
-      <p>abv: {props.abv}</p>
-      <p>price: ${props.price}</p>
-      <p>pints left: {props.remaining}</p>
-
-    </div>
+    <tr>
+      <td>{props.name}</td>
+      <td>{props.brewer}</td>
+      <td>{props.description}</td>
+      <td>{props.abv}</td>
+      <td>${props.price}</td>
+      <td>{props.remaining}</td>
+    </tr>
   );
 }
 
@@ -23,7 +22,7 @@ Keg.propTypes = {
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.number.isRequired
+  remaining: PropTypes.string.isRequired,
 };
 
 export default Keg;
