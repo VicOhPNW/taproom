@@ -54,10 +54,26 @@ let masterKegList = [
 
 function KegList() {
   let styledKegList = {
+    marginRight: 100,
+    marginLeft: 100
   };
 
   return (
     <div style={styledKegList}>
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Brewer</th>
+            <th scope="col">Description</th>
+            <th scope="col">ABV</th>
+            <th scope="col">$</th>
+            <th scope="col">Pints Remaining</th>
+          </tr>
+        </thead>
+      </table>
+
       {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
           brewer={keg.brewer}
