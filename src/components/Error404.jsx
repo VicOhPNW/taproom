@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Page404() {
+function Error404() {
   return(
     <div>
       <h1>Page 404 Not Found</h1>
@@ -8,4 +8,4 @@ function Page404() {
   );
 }
 
-export default Page404;
+export default Error404;

@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import KegList from './KegList';
 import NewKegForm from './NewKegForm';
-import Page404 from './Page404';
+import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
@@ -15,13 +15,12 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-
-
+      
       <Header/>
       <Switch>
         <Route exact path='/' component={KegList} />
         <Route path='/newkeg' component={NewKegForm} />
-        <Route component={Page404} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
