@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import Header from './Header';
 import KegList from './KegList';
-import NewKegForm from './NewKegForm';
+import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={KegList} />
-        <Route path='/newkeg' component={NewKegForm} />
+        <Route path='/newkeg' component={NewKegControl} />
         <Route component={Error404} />
       </Switch>
       
