@@ -1,4 +1,6 @@
 import React from 'react';
+import ConfirmBeforeAdd from './ConfirmBeforeAdd';
+import NewKegForm from './NewKegForm';
 
 class NewKegControl extends React.Component {
 
@@ -7,17 +9,25 @@ class NewKegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleConfirmBeforeAdd = this.handleConfirmBeforeAdd.bind(this);
   }
 
-  handleClick() {
+  handleConfirmBeforeAdd() {
     this.setState({formVisibleOnPage: true});
   }
 
   render() {
+    let currentlyVisibleContent = null;
+
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleContent = <NewKegForm />;
+    } else {
+      currentlyVisibleContent = <ConfirmBeforeAdd onConfirmBeforeAdd={this.handleConfirmBeforeAdd} />;
+    }
+
     return(
       <div>
-        <p>this is newKegControl</p>
+        {currentlyVisibleContent}
       </div>
     );
   }
