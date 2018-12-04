@@ -6,31 +6,34 @@ import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
-function App(){
-  var styles = {
-  };
+class App extends React.Component{
 
-  return (
-    <div style={styles}>
-      <style jsx>{`
-        font-family: Helvetica;
-      `}</style>
+  render(){
+    var styles = {
+    };
 
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={KegList} />
-        <Route path='/newkeg' component={NewKegControl} />
-        <Route component={Error404} />
-      </Switch>
-      
-      {/* 1/2 CODE FOR ERROR 404 TO SHOW W/OUT HEADER      */}
-      {/* <Switch>
-        <Route exact path='/' component={withHeader(KegList)} />
-        <Route exact path='/newkeg' component={withHeader(NewKegForm)} />
-        <Route component={Error404} />
-      </Switch> */}
-    </div>
-  );
+    return (
+      <div style={styles}>
+        <style jsx>{`
+          font-family: Helvetica;
+        `}</style>
+    
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={KegList} />
+          <Route path='/newkeg' component={NewKegControl} />
+          <Route component={Error404} />
+        </Switch>
+        
+        {/* 1/2 CODE FOR ERROR 404 TO SHOW W/OUT HEADER      */}
+        {/* <Switch>
+          <Route exact path='/' component={withHeader(KegList)} />
+          <Route exact path='/newkeg' component={withHeader(NewKegForm)} />
+          <Route component={Error404} />
+        </Switch> */}
+      </div>
+    );
+  }
 }
 
 // -- 2/2 CODE FOR ERROR 404 TO SHOW W/OUT HEADER 
