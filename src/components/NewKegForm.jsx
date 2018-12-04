@@ -32,46 +32,56 @@ function NewKegForm(){
             ref={(input) => {_names = input;}} />
         </div>
         
-        <label for='brewer'>Brewer: </label>
-        <input
-          type='text'
-          id='brewer'
-          placeholder='brewer/brand'
-          className='form-control'
-          ref={(input) => {_brewer = input;}} />
+        <div className='form-group'>
+          <label for='brewer'>Brewer: </label>
+          <input
+            type='text'
+            id='brewer'
+            placeholder='brewer/brand'
+            className='form-control'
+            ref={(input) => {_brewer = input;}} />
+        </div>
 
-        <label for='Description'>Description: </label>
-        <textarea
-          id='description'
-          placeholder='style, flavors, scents, etc...'
-          className='form-control'
-          ref={(input) => {_description = input;}} />
+        <div className='form-group'>
+          <label for='Description'>Description: </label>
+          <textarea
+            id='description'
+            placeholder='style, flavors, scents, etc...'
+            className='form-control'
+            ref={(input) => {_description = input;}} />
+        </div>
 
-        <label for='abv'>ABV%: </label>
-        <input
-          type='text'
-          id='abv'
-          placeholder='ABV%'
-          className='form-control'
-          ref={(input) => {_abv = input;}} />
+        <div className='form-group'>
+          <label for='abv'>ABV%: </label>
+          <input
+            type='text'
+            id='abv'
+            placeholder='ABV%'
+            className='form-control'
+            ref={(input) => {_abv = input;}} />
+        </div>
 
-        <label for='price'>Price: </label>
-        <input
-          type='text'
-          id='price'
-          placeholder='price/pint'
-          className='form-control'
-          ref={(input) => {_price = input;}} />
+        <div className='form-group'>
+          <label for='price'>Price: </label>
+          <input
+            type='text'
+            id='price'
+            placeholder='price/pint'
+            className='form-control'
+            ref={(input) => {_price = input;}} />
+        </div>
 
-        <label for='number'>Pints Available: </label>
-        <input
-          type='number'
-          id='pints'
-          placeholder='available pints'
-          className='form-control'
-          ref={(input) => {_pints = input;}} />
+        <div className='form-group'>
+          <label for='number'>Pints Available: </label>
+          <input
+            type='number'
+            id='pints'
+            placeholder='available pints'
+            className='form-control'
+            ref={(input) => {_pints = input;}} />
+        </div>
 
-        <button type='submit'>Help!</button>
+        <button type='submit'>Add Keg</button>
       </form>
     </div>
   );
