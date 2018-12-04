@@ -1,7 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
+import PropTypes from 'prop-types';
 
-function KegList() {
+function KegList(props) {
   let styledKegList = {
     marginLeft: 50,
     marginRight: 50
@@ -21,7 +22,7 @@ function KegList() {
           </tr>
         </thead>
         <tbody>
-          {masterKegList.map((keg, index) =>
+          {props.kegList.map((keg, index) =>
             <Keg
               name={keg.name}
               brewer={keg.brewer}
@@ -37,8 +38,13 @@ function KegList() {
   );
 }
 
+KegList.propTypes = {
+  kegList: PropTypes.array
+};
+
 export default KegList;
 
+// FORMER, HARD-CODED DATA
 // let masterKegList = [
 //   {
 //     name: 'Ruby Zozzle',

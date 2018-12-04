@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewKegForm(){
+function NewKegForm(props){
   let _names = null;
   let _brewer = null;
   let _description = null;
@@ -11,6 +12,7 @@ function NewKegForm(){
 
   function handleNewKegFormSubmission() {
     event.preventDefault();
+    props.onNewKegCreation({names: _names.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, pints: _pints.value});
     _names.value = '';
     _brewer.value = '';
     _description.value = '';
@@ -86,5 +88,9 @@ function NewKegForm(){
     </div>
   );
 }
+
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegForm;
