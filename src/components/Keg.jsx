@@ -6,23 +6,23 @@ function Keg(props) {
 
   return (
     <tr>
-      <td>{props.name}</td>
+      <td>{props.names}</td>
       <td>{props.brewer}</td>
       <td>{props.description}</td>
       <td>{props.abv}</td>
       <td>${props.price}</td>
-      <td>{props.remaining}</td>
+      <td>{props.pints}</td>
     </tr>
   );
 }
 
 Keg.propTypes = {
-  name: PropTypes.string.isRequired,
+  names: PropTypes.string.isRequired,
   brewer: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.number.isRequired,
+  pints: PropTypes.number.isRequired,
 };
 
 export default Keg;

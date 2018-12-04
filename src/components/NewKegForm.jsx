@@ -10,9 +10,11 @@ function NewKegForm(props){
   let _pints = null;
 
 
-  function handleNewKegFormSubmission() {
+  function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({names: _names.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, pints: _pints.value});
+    console.log(_names.value);
+    console.log(_pints.value);
     _names.value = '';
     _brewer.value = '';
     _description.value = '';
@@ -25,7 +27,7 @@ function NewKegForm(props){
     <div>
       <form onSubmit={handleNewKegFormSubmission} className='container'>
         <div className='form-group'>
-          <label for='names'>Name: </label>
+          <label htmlFor='names'>Name: </label>
           <input
             type='text'
             id='names'
@@ -35,7 +37,7 @@ function NewKegForm(props){
         </div>
         
         <div className='form-group'>
-          <label for='brewer'>Brewer: </label>
+          <label htmlFor='brewer'>Brewer: </label>
           <input
             type='text'
             id='brewer'
@@ -45,7 +47,7 @@ function NewKegForm(props){
         </div>
 
         <div className='form-group'>
-          <label for='Description'>Description: </label>
+          <label htmlFor='Description'>Description: </label>
           <textarea
             id='description'
             placeholder='style, flavors, scents, etc...'
@@ -54,7 +56,7 @@ function NewKegForm(props){
         </div>
 
         <div className='form-group'>
-          <label for='abv'>ABV%: </label>
+          <label htmlFor='abv'>ABV%: </label>
           <input
             type='text'
             id='abv'
@@ -64,7 +66,7 @@ function NewKegForm(props){
         </div>
 
         <div className='form-group'>
-          <label for='price'>Price: </label>
+          <label htmlFor='price'>Price: </label>
           <input
             type='text'
             id='price'
@@ -74,7 +76,7 @@ function NewKegForm(props){
         </div>
 
         <div className='form-group'>
-          <label for='number'>Pints Available: </label>
+          <label htmlFor='pints'>Pints Available: </label>
           <input
             type='number'
             id='pints'
