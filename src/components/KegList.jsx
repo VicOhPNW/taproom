@@ -24,12 +24,12 @@ function KegList(props) {
         <tbody>
           {props.kegList.map((keg, index) =>
             <Keg
-              name={keg.names}
+              names={keg.names}
               brewer={keg.brewer}
               description={keg.description}
               abv={keg.abv}
               price={keg.price}
-              remaining={keg.pints}
+              pints={keg.pints}
               key={index} />
           )}
         </tbody>
