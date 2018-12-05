@@ -24,7 +24,8 @@ In your description of the project include thoughts on the difference in develop
 
 
 ## *Specifications*
-* [Component Structure](https://drive.google.com/file/d/1huNNHCX5O8ea0r6EQK9Z01d8VYarkKbS/view?usp=sharing)
+* [Component Structure v.1](https://drive.google.com/file/d/1huNNHCX5O8ea0r6EQK9Z01d8VYarkKbS/view?usp=sharing)
+* [Component Structure v.2](https://drive.google.com/file/d/1xNZL9-s-UvcyEISC-iyKfre3ZT7_tM7O/view?usp=sharing)
 * A user can see a list of all available kegs.
 * For each keg, a user can see name, brand, price and alcohol content.
 * A user can add a new keg and see that it's been dynamically posted to the splash page.
